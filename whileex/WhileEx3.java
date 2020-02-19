@@ -1,0 +1,38 @@
+package whileex;
+/* 1.사각형  2.삼각형  3.원   4.종료
+ * 선택하세요 : 1
+ * 사각형이 선택되었습니다
+ * 
+ * 1.사각형  2.삼각형  3.원   4.종료
+ * 선택하세요 : 4
+ * ***종료합니다****
+ * 
+ */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class WhileEx3 {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		
+		int n;
+		
+		while(true) {
+			System.out.print("1.사각형  2.삼각형  3.원   4.종료\n"+"선택하세요 : ");
+	
+		n=Integer.parseInt(br.readLine());
+		
+	    switch(n) {
+	    case 1: System.out.println("사각형이 선택되었습니다"); break;
+	    case 2: System.out.println("삼각형이 선택되었습니다"); break;
+	    case 3: System.out.println("원형이 선택되었습니다"); break;
+	    case 4: System.out.println("***종료합니다***"); 
+	    System.exit(0);  //강제종료, 정상종료
+	    }
+		
+		}
+	}
+}
